@@ -109,11 +109,11 @@
           flex: 2 1 100%;
           max-height: 50px;
           height:4vh;
-          margin:1.6vh 30px  0;
+          margin:1.6vh 5vw  0;
           border: none;
           
           font-weight: bold;
-          font-size: 130%;
+          font-size: 120%;
           align-items: center;
           justify-content: center;
         }
@@ -201,8 +201,8 @@
           border-bottom: rgb(30, 189, 110) 4px solid;
         }
         #certificate_window{
-            width: 88%;
-            height: fit-content;
+            height: 75%;
+            padding: 3% 1% 0;
             text-align: center;
            display: none;
             position: absolute;
@@ -224,45 +224,31 @@
         #certBtn.show{
           display: flex;
         }
-        #certificate_window button{
-          width: 12%;
-          padding:0 0 12% 0;
-          height: 0;
-          box-sizing: border-box;
-          z-index: 7;
-          position: absolute;
-          border-radius: 20%;
-          background-color: rgba(0, 0, 0, 0);
-          background-size: contain;
-          background-repeat: no-repeat;
-          border: 0;
-        }
+
         #canvasWrapper{
+          position: absolute;
           z-index: 6;
+          z-index: 5;
+          flex: 1 1 auto;
           margin:auto auto;
-          display:inline-block;
-          height: fit-content;
-          max-height: 100%;
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-            visibility: hidden;
-            opacity: 0;
+          display: inline-block;
+          height: 127.2928vw;
+          width: 90vw;
+          max-height: 90%;
         }
         #canvasWrapper.show{
           visibility: visible;
           opacity: 1;
         }
         #certificate{
-
+          position: relative;
           z-index: 5;
-          
+          flex: 1 1 auto;
           margin:auto auto;
           display: inline-block;
-          height: fit-content;
-          max-height: 100%;
-          width: 100%;
-          background-position: center;
+          height: 127.2928vw;
+          width: 90vw;
+          max-height: 90%;
         }
         .html2canvas{
           position: absolute;
@@ -272,10 +258,10 @@
           width: 100%;
         }
         #certificate img{
-          width: 100%;
+          width: fit-content;
           height: 100%;
           max-height: 90vh;
-          object-fit: contain;
+          object-fit: scale-down;
         }
         #cert_name{
           font-family: 'Noto Serif TC', serif;
@@ -334,7 +320,11 @@
           background-image: url("Markers/portrait14.jpg");
           background-size: cover;
         }
-
+        @media (max-aspect-ratio: 1/2) {
+          #certificate_window{
+            height: fit-content;
+          }
+        }
         @media only screen and (orientation: landscape) {
           .window{
             width: 85%;
@@ -358,7 +348,7 @@
           font-size: 100%;
           flex:1;
           height:8vh;
-          margin: 0 5px 0 5px;
+          margin: 2vh 5px 0 5px;
           letter-spacing: 0em;
         }
         
@@ -597,16 +587,18 @@
     <p>上海《大公報》於1949年1月21日刊登記由歌雷處取得楊逵所撰〈和平宣言〉的文稿，內容要求還政於民、和平建國、保障言論自由，呼籲避免台灣捲入戰爭，成為和平示範區等訴求。
     </br>因此楊逵遭指控言論有利叛徒宣傳，被依《懲治叛亂條例》第七條，判處12年有期徒刑。同案被告鐘平山（7年）、陳軍（10年）有期徒刑。楊逵日後戲稱「領過全世界最高的稿費」。
     <img src="Images/1-2-臺大圖書館-2022-03-17-11-49-35-01.jpg"></p>
-      <div class="containerSingle">
-      <button onclick="closeWindow('#portrait1')">關閉</button></div>
+      <div class="containerRow">
+      <button onclick="closeWindow('#portrait1')">關閉</button>      <button >更多</button>
+</div>
   </div>
 <div id="portrait2" class="window">
   <h3>雷震</h3>
   <p>蔣中正1956年生日前夕，公開對外徵求建言。《自由中國》響應發行「祝壽專號」，卻由於文章內容批評政治現狀，引起蔣中正及國民黨當局不滿，繼而發動政戰系統及媒體圍剿《自由中國》，雙方關係因此正式決裂。
   <br><img src="Images/III-023-雷震紀念館-祝壽專號封面.jpeg" width="35.5%" style="margin:1em 4.5% 3em 0;"><img src="Markers/area3.jpg"width="60%">
   </br>圖：自由中國社九週年紀念會、《自由中國》祝壽專號</p>
-    <div class="containerSingle">
-    <button onclick="closeWindow('#portrait2')">關閉</button> </div>
+  <div class="containerRow">
+    <button onclick="closeWindow('#portrait2')">關閉</button>    <button >更多</button>
+</div>
 </div>
 <div id="portrait3" class="window">
   <h3>傅正</h3>
@@ -614,16 +606,18 @@
     <img src="Images/3-2-邱萬興提供-1988.8.9到監察院抗議焚毀雷震回憶錄 (13).jpg"></p>
 
   </p>
-    <div class="containerSingle">
-    <button onclick="closeWindow('#portrait3')">關閉</button></div>
+  <div class="containerRow">
+    <button onclick="closeWindow('#portrait3')">關閉</button>    <button >更多</button>
+</div>
 </div>
 <div id="portrait4" class="window">
   <h3>殷海光</h3>
   <p>1966年教育部行文台大，「要求」不續聘殷海光。殷告訴錢思亮校長：「我並沒有一定在台大待下去的意思。我只是想，像外界對我所作種種處斷，不僅嚴重地侵犯民主社會的人權和學人尊嚴，而且在事實上使我來不及轉身。」
     <img src="Images/IV-020-殷海光基金會-致錢思亮校長信1.png" width="48%" style="margin:1em 4% 3em 0;"><img src="Images/IV-020-殷海光基金會-致錢思亮校長信2.png" width="48%">
   </br>圖：致錢思亮校長信</p>
-    <div class="containerSingle">
-    <button onclick="closeWindow('#portrait4')">關閉</button></div>
+  <div class="containerRow">
+    <button onclick="closeWindow('#portrait4')">關閉</button>    <button >更多</button>
+</div>
 </div>
 <div id="portrait5" class="window">
   <h3>彭明敏</h3>
@@ -633,8 +627,9 @@
 <img src="Images/5-2-1996.3總統民選選舉11.jpg" width="48%" style="margin:1em 4% 3em 0;"><img src="Images/5-3彭明敏謝長廷競選文宣標誌.jpg  " width="48%">
 
 </br> 圖：1996.3參與民主進步黨總統候選人黨內初選選舉文宣、彭明敏・謝長廷競選視覺標誌</p>
-    <div class="containerSingle">
-    <button onclick="closeWindow('#portrait5')">關閉</button></div>
+<div class="containerRow">
+  <button onclick="closeWindow('#portrait5')">關閉</button>  <button >更多</button>
+</div>
 </div>
 <div id="portrait6" class="window">
   <h3>魏廷朝</h3>
@@ -644,22 +639,25 @@
 </br>第三：近年來，選風敗壞，一般人認為：不大花錢，根本不可能當選。最可怕的是，大家都漸漸受到感染。這對民主政治的前途，是極大的障礙。我希望能夠借我自己參選的機會，樹立清白選舉的典範。
 </br><img src="Images/6-1-1983魏廷朝雜誌報導06.jpeg" width="47%" style="margin:1em 4% 3em 0;"><img src="Images/6-2-1995魏廷朝選舉02.jpeg"width="49%">
 </br>圖：1983魏廷朝雜誌報導、1995魏廷朝選舉傳單</p>
-    <div class="containerSingle">
-    <button onclick="closeWindow('#portrait6')">關閉</button></div>
+<div class="containerRow">
+  <button onclick="closeWindow('#portrait6')">關閉</button>  <button >更多</button>
+</div>
 </div>
 <div id="portrait7" class="window ">
   <h3>謝聰敏</h3>
   <p>1971年謝聰敏再度因美國商業銀行及美國台南新聞處爆炸案入獄，獄友小林正成在遣返日本後，將謝的求援信傳播出來，謝才得以保外就醫。2007年兩人出席台北賓館的「政治受難者與救援者相見歡晚會」，公開當年信件內容。
     <img src="Images/V-010-邱萬興-2007年謝聰敏出席景美人權園區開幕，幫他攜帶出密信的小林正成也出席，見證當年白色恐怖。.jpeg   "></p>  
-    <div class="containerSingle">
-    <button onclick="closeWindow('#portrait7')">關閉</button></div>
+    <div class="containerRow">
+      <button onclick="closeWindow('#portrait7')">關閉</button>      <button >更多</button>
+</div>
 </div>
 <div id="portrait8" class="window">
   <h3>李敖</h3>
   <p>李敖在《文星》第98期發表社論〈我們對「國法黨限」的嚴正表示—以謝然之先生的作風為例〉，指國民黨員謝然之濫用權力，批評國民黨黨部對「國法黨限」觀念的混亂。此文成為《文星》停刊的導火線。
     <br><img src="Images/IV-012_文星_98_cover.png"></p>  
-    <div class="containerSingle">
-    <button onclick="closeWindow('#portrait8')">關閉</button></div>
+    <div class="containerRow">
+      <button onclick="closeWindow('#portrait8')">關閉</button>      <button >更多</button>
+</div>
 </div>
 <div id="portrait9" class="window">
   <h3>柏楊</h3>
@@ -667,8 +665,9 @@
   <br>本書記載1949年底從雲南往緬甸撤退的孤軍之奮戰及其艱難險阻，孤軍腹背受敵（共軍、緬軍），又得不著政府之支援，在複雜情勢中的戰略擬定及戰術運用，以及袍澤、親子的關係等情節，交織成一部感人肺腑的戰爭文學作品。
   <img src="Images/9-2書籍封面.jpg">
   <br>圖：為1961年平原出版社出版「異域」</p>
-    <div class="containerSingle">
-    <button onclick="closeWindow('#portrait9')">關閉</button></div>
+  <div class="containerRow">
+    <button onclick="closeWindow('#portrait9')">關閉</button>    <button >更多</button>
+</div>
 </div>
 <div id="portrait10" class="window">
   <h3>黃信介</h3>
@@ -679,8 +678,9 @@
 <br><img src="Images/10-1-1978串聯與未完成的選舉 03.jpeg" width="32%" style="margin:1em 4% 3em 0;"><img src="Images/10-2黃信介手稿.jpg"width="64%">
 
 </br>圖：1978年串聯與未完成的選舉、黃信介手稿</p>
-    <div class="containerSingle">
-    <button onclick="closeWindow('#portrait10')">關閉</button></div>
+<div class="containerRow">
+  <button onclick="closeWindow('#portrait10')">關閉</button>  <button >更多</button>
+</div>
 </div>
 <div id="portrait11" class="window">
   <h3>康寧祥</h3>
@@ -689,8 +689,9 @@
   <img src="Images/11-2-1980.11.1康寧祥與民主政治禁書.JPG">
 
 </br>圖：1980.11.1康寧祥與民主政治（禁書）</p>
-    <div class="containerSingle">
-    <button onclick="closeWindow('#portrait11')">關閉</button></div>
+<div class="containerRow">
+  <button onclick="closeWindow('#portrait11')">關閉</button>  <button >更多</button>
+</div>
 </div>
 <div id="portrait12" class="window">
   <h3>施明德</h3>
@@ -698,15 +699,17 @@
   </br>《奉獻給台灣的施明德》是施明德重新取得公民權後，代表民進黨在1992年參選台南市立法委員的競選手冊。
   <br><img src="Images/12-1-施明德的政治遺囑.jpg" width="46.8%" style="margin:1em 4% 3em 0;"><img src="Images/12-2-獻給台灣的施明德.jpg"width="49.2%"></p>
 
-    <div class="containerSingle">
-    <button onclick="closeWindow('#portrait12')">關閉</button></div>
+  <div class="containerRow">
+    <button onclick="closeWindow('#portrait12')">關閉</button>    <button >更多</button>
+</div>
 </div>
 <div id="portrait13" class="window">
   <h3>陳水扁</h3>
   <p>1986年5月30日《蓬萊島》雜誌第一期有一文，指出馮滬祥的論文，以「翻譯代替著作」，遭馮控告毀謗，本案二審時，陳水扁、黃天福、李逸洋遭判刑8個月，罰款二百萬元，3人遂入獄服刑，成為爭取言論自由的鬥士。（可於展場第三展間閱讀區閱覽）
     <img src="Images/13-1蓬萊島-江南命案謎底揭曉.png" width="48%" style="margin:1em 4% 3em 0;"><img src="Images/13-2蓬萊島-陳啟禮錄音帶嚇壞國民黨.png"width="48%"></p>
-    <div class="containerSingle">
-    <button onclick="closeWindow('#portrait13')">關閉</button></div>
+    <div class="containerRow">
+      <button onclick="closeWindow('#portrait13')">關閉</button>      <button >更多</button>
+</div>
 </div>
 <div id="portrait14" class="window">
   <h3>鄭南榕</h3>
@@ -720,8 +723,8 @@
     <br>圖：1989年5月19日鄭南榕告別式文宣
   
   </p>
-    <div class="containerSingle">
-    <button onclick="closeWindow('#portrait14');getPoint(8)">關閉</button></div>
+  <div class="containerRow">
+    <button onclick="closeWindow('#portrait14')">關閉</button><button >更多</button></div>
 </div>
 <div id="portrait15" class="window">
   <h3>李鎮源</h3>
@@ -730,8 +733,9 @@
     <br><img src="Images/15-1-邱萬興提供-100行動聯盟logo-1991.jpeg">
 
   </br>圖：1991年「100行動聯盟」傳單、布條、標語圖</p>
-    <div class="containerSingle">
-    <button onclick="closeWindow('#portrait15')">關閉</button></div>
+  <div class="containerRow">
+    
+    <button onclick="closeWindow('#portrait15')">關閉</button><button >更多</button></div>
 </div>
 
 <div id="progress" class="window" style="height: 75%;">
@@ -752,17 +756,19 @@
 
 </div>
 
-<div id="certificate_window" class="">
+<div id="certificate_window" class="window">
   <div id="certificate">
-    <img src="Images/certificate.png">
+    <img id="certImg" src="Images/certificate.png">
     <h2 id="cert_name">text</h2>
     <h2 id="cert_date">text</h2>
   </div>
   <div id="canvasWrapper">
     
   </div>
-  <button onclick="saveCert()" style="right: 5%;bottom: 3%;background-image: url('Images/floppy-disk-solid.png');"></button>
-  <button onclick="closeWindow('#certificate_window')" style="top: 3%;right: 5%;background-image: url('Images/cancel.png');"></button>
+  <div class="containerRow">
+  <button onclick="saveCert()" >下載</button>
+  <button onclick="closeWindow('#certificate_window')" >關閉</button>
+  </div>
 </div>
 
 
@@ -918,10 +924,13 @@
     const d=new Date();
     document.getElementById("cert_name").innerHTML=document.getElementById('input_name').value;
     document.getElementById("cert_date").innerHTML=d.getFullYear()+"/"+d.getMonth()+"/"+d.getDate();
-    
+    document.getElementById('canvasWrapper').clientWidth=document.getElementById('certImg').clientWidth;
+    document.getElementById('canvasWrapper').clientHeight=document.getElementById('certImg').clientHeight;
   }
   
 function saveCert(){
+  document.getElementById('canvasWrapper').clientWidth=document.getElementById('certImg').clientWidth;
+    document.getElementById('canvasWrapper').clientHeight=document.getElementById('certImg').clientHeight;
   const c=document.querySelector("#certificate");
     html2canvas(c, {
     onrendered: function(canvas) {
