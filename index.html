@@ -386,7 +386,7 @@
     </style>
   </head>
   <body>
-    <div id="scanUI"> 
+    <div id="scanUI" class="hidden"> 
       <div id="scanUIprompt" style="font-size:3.8vmin;padding:1% 6%;position: fixed;top:12vh;color: white;background-color: rgb(59,59,59,0.8);border-radius: 20px;margin: 0 auto;left:0;right:0;width: fit-content;text-align: center;"> 
         找到圖片來掃描
       </div>
@@ -781,7 +781,7 @@
 
     <button id="progressBar" onclick="openProgress()"></button>
     
-    <a-scene mindar-image="imageTargetSrc: Markers/targets.mind;uiScanning: #scanUI;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: Markers/targets.mind;uiScanning:none;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       <a-entity id="area1" mindar-image-target="targetIndex: 0"></a-entity>
       <a-entity id="area2" mindar-image-target="targetIndex: 1"></a-entity>
@@ -821,6 +821,10 @@
       windowActive=false;
       completed=false;
       readProgress();
+      const sceneEl = document.querySelector('a-scene');
+sceneEl.addEventListener("arReady", (event) => {
+  document.querySelector("#scanUI").classList.remove("hidden");
+});
     })();
     for (let i = 1; i < 8; i++) {
     const areaTarget = document.querySelector("#area"+CSS.escape(i));
