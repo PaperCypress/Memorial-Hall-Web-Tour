@@ -883,6 +883,7 @@
     function closeAnswer(index,answer){
       document.querySelector("#answer"+CSS.escape(index)+"_"+CSS.escape(answer)).classList.remove("show");
       windowActive=false;
+      document.querySelector("#scanUI").classList.remove("hidden");
       getPoint(index);
       
     }
