@@ -13,7 +13,7 @@
 
   gtag('config', 'G-C96RW7MTWP');
 </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image.prod.js"></script>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
@@ -279,7 +279,7 @@
         #cert_date{
           font-family: 'Noto Serif TC', serif;
           position: absolute;
-          top:88%;
+          top:83%;
           left: 0;right: 0;
           margin: 0 auto;
           font-size: 4vmin;
@@ -723,7 +723,7 @@
     <img src="Images/14-2-1984.3.12自由時代雜誌16.png">
 
     <br>圖：「自由時代週刊第一六四期依法查禁」公文
-    <br><br>《自由時代》刊登許世楷起草的《台灣共和國新憲法草案》，鄭南榕因此遭傳訊。因為堅定捍衛包括主張臺灣獨立的言論自由，鄭南榕拒絕出庭應訊；1989年4月7日警方強行攻堅試圖將之拘提到案，鄭南榕自焚殉難。鄭南榕生前曾說過：「要打破國民黨的專制權威，我們一定要突破總統府前的遊行禁忌。」1989年5月19日，眾人舉行鄭南榕告別遊行，行經總統府前時，舉行悼念儀式，完成他的心願。
+    <br><br>《自由時代》刊登許世楷起草的《台灣共和國新憲法草案》，鄭南榕因此遭傳訊。因為堅定捍衛包括主張臺灣獨立的言論自由，鄭南榕拒絕出庭應訊；1989年4月7日軍警特強行攻堅試圖將之拘提到案，鄭南榕自焚殉道。鄭南榕生前曾說過：「要打破國民黨的專制權威，我們一定要突破總統府前的遊行禁忌。」1989年5月19日，眾人舉行鄭南榕告別遊行，行經總統府前時，舉行悼念儀式，完成他的心願。
     <img src="Images/14-3-1989.5.19鄭南榕告別式文宣 (4).jpg">
 
     <br>圖：1989年5月19日鄭南榕告別式文宣
@@ -939,20 +939,20 @@ function saveCert(){
   document.getElementById('canvasWrapper').clientWidth=document.getElementById('certImg').clientWidth;
     document.getElementById('canvasWrapper').clientHeight=document.getElementById('certImg').clientHeight;
   const c=document.querySelector("#certificate");
-    html2canvas(c, {
-    onrendered: function(canvas) {
+  html2canvas(c).then(canvas => {
+
       canvas.className = "html2canvas";
+      canvas.preserveDrawingBuffer = true;
       document.getElementById("canvasWrapper").appendChild(canvas);
-      const image = canvas.toDataURL("image/png");
+
+      const image = canvas.toDataURL("image/png",1);
       certImg=image;
       var a  = document.createElement('a');
     a.href = certImg;
     a.download = 'certificate.png';
 
     a.click()
-    },
-    useCORS: true
-    
+   
   });
 
   
