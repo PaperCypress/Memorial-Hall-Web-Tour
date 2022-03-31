@@ -943,9 +943,10 @@ sceneEl.addEventListener("arReady", (event) => {
 }
   function createCertificate(){
     openWindow('#certificate_window',true);
-    const d=new Date();
+    var d=new Date();
+    d.setTime(d.getTime());
     document.getElementById("cert_name").innerHTML=document.getElementById('input_name').value;
-    document.getElementById("cert_date").innerHTML=d.getFullYear()+"/"+d.getMonth()+"/"+d.getDate();
+    document.getElementById("cert_date").innerHTML=d.getFullYear()+"/"+(d.getMonth()+1)+"/"+d.getDate();
     document.getElementById('canvasWrapper').clientWidth=document.getElementById('certImg').clientWidth;
     document.getElementById('canvasWrapper').clientHeight=document.getElementById('certImg').clientHeight;
   }
