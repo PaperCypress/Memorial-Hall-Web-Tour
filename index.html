@@ -104,17 +104,17 @@
         .window button{
           letter-spacing: 0.05em;
           color: rgb(30, 189, 110);
-          border-radius: 3rem;
-
+          border-radius: 9vh;
+          white-space: nowrap;
           transform: translateZ(0);
-          border: 2px solid #979797  ;
+          border: 0.2vh solid #979797  ;
           background-color: rgba(216, 216, 216, 0.3);
           display: flex;
           flex: 2 1 100%;
-          height:4vh;
+          height:5vh;
           margin:1.6vh 5vw  0;
           font-weight: bold;
-          font-size: 120%;
+          font-size: 4.8vw;
           align-items: center;
           justify-content: center;
         }
@@ -153,7 +153,7 @@
           margin-bottom:10px;
         }
         .containerSingle button{
-          max-width: 33%;
+          max-width:40%;
         }
         #progress .container{
           position: relative;
@@ -189,7 +189,13 @@
           text-align: center;
           color:#BAB8B9;
           font-weight: 500;
-          font-size: 10vmin;
+          font-size: 5vh;
+        }
+        @media (max-aspect-ratio: 1/2) {
+          #certificate_window{
+            height: fit-content;
+          }
+
         }
         #input_name{
           margin: 0 auto;
@@ -199,7 +205,7 @@
           color: white;
           background: transparent;
           border: none;
-          border-bottom: rgb(30, 189, 110) 4px solid;
+          border-bottom: rgb(30, 189, 110) 0.8vw solid
         }
         #certificate_window{
             height: 75%;
@@ -263,7 +269,6 @@
           
           height: 100%;
           max-height: 90vh;
-          object-fit: scale-down;
         }
         #cert_name{
           font-family: 'Noto Serif TC', serif;
@@ -272,7 +277,7 @@
           color: #b4110a;
           left: 0;right: 0;
           margin: 0 auto;
-          font-size: 7.5vmin;
+          font-size: 7vmin;
          width:100%;
          text-align: center;
          letter-spacing: 0.15em;
@@ -280,7 +285,7 @@
         #cert_date{
           font-family: 'Noto Serif TC', serif;
           position: absolute;
-          top:88%;
+          top:87%;
           left: 0;right: 0;
           margin: 0 auto;
           font-size: 4vmin;
@@ -322,10 +327,19 @@
           background-image: url("Markers/portrait14.jpg");
           background-size: cover;
         }
+        @media (min-aspect-ratio: 36/67) {
+          #cert_name{
+            font-size: 3.5vh;
+          }
+          #cert_date{
+            font-size: 2vh;
+          }
+        }
         @media (max-aspect-ratio: 1/2) {
           #certificate_window{
             height: fit-content;
           }
+
         }
         @media only screen and (orientation: landscape) {
           .window{
@@ -347,7 +361,7 @@
         }
 
          .window button{
-          font-size: 100%;
+          font-size: 3vh;
           flex:1;
           height:4vh;
           margin: 2vh 5px 0 5px;
@@ -393,8 +407,8 @@
       </div>
     </div>
     <div id="pointWindow" class="window" onclick="closeWindow('#pointWindow')" style="height: 75%;justify-content: flex-start;">
-      <h2 style="text-align: center;margin-top: 15%;margin-bottom: 15%;font-size:7.7vmin;text-shadow: 0em 0.13em rgba(0, 0, 0, 0.5) ;color: #EE7575;">恭喜您獲得一點</h2>
-      <img src="Images/medal.png" width="100%">
+      <h2 style="text-align: center;height: 18vh;line-height:18vh;margin:0;font-size:7vmin;font-weight:500;text-shadow: 0em 0.13em rgba(0, 0, 0, 0.5) ;color: #EE7575;">恭喜您獲得一點</h2>
+      <div style="height: 57vh;"><img src="Images/medal.png"  style="width: 100%;height: 80%;object-fit: scale-down;"></div>
     </div>
 
     <div id="quiz1" class="window">
@@ -432,7 +446,7 @@
         <div class="container">
         <button onclick="chooseAnswer(2,1)">與同學共乘單車</button>
         <button onclick="chooseAnswer(2,2)">抗議警察執法過當</button>
-        <button onclick="chooseAnswer(2,3)" style="font-size: 90%;letter-spacing: 0;">在連儂牆（Lennon Wall）為正義發聲</button></div>
+        <button onclick="chooseAnswer(2,3)" style="font-size: 4vmin;letter-spacing: 0;">在連儂牆（Lennon Wall）為正義發聲</button></div>
     </div>
     <div id="answer2_1" class="window">
       <h3 class="green">與同學共乘單車</h3>
@@ -456,8 +470,8 @@
     <p>今日臺灣人民有組織政黨、集會、結社的自由，但在1950年代，若你想組織一個反對黨，可能會遭遇什麼事？</p>
       <div class="container">
       <button onclick="chooseAnswer(3,1)">需要貸款卻被銀行拒絕</button>
-      <button onclick="chooseAnswer(3,2)" style="font-size: 109%;letter-spacing: 0;">法院傳票像廣告信件一樣收不完</button>
-      <button onclick="chooseAnswer(3,3)" style="font-size: 109%;letter-spacing: 0;"  >特務整天跟監你，甚至抓去關</button></div>
+      <button onclick="chooseAnswer(3,2)" style="letter-spacing: 0;">法院傳票像廣告信件一樣收不完</button>
+      <button onclick="chooseAnswer(3,3)" style="letter-spacing: 0;"  >特務整天跟監你，甚至抓去關</button></div>
   </div>
   <div id="answer3_1" class="window">
     <h3 class="green">需要貸款卻被銀行拒絕</h3>
@@ -538,7 +552,7 @@
       <div class="container">
       <button onclick="chooseAnswer(6,1)">519綠色行動</button>
       <button onclick="chooseAnswer(6,2)">野百合學運</button>
-      <button onclick="chooseAnswer(6,3)" style="font-size: 109%;letter-spacing: 0;" >100行動聯盟－反閱兵・廢惡法</button></div>
+      <button onclick="chooseAnswer(6,3)" style="" >100行動聯盟－反閱兵・廢惡法</button></div>
   </div>
   <div id="answer6_1" class="window">
     <h3 class="green">519綠色行動 </h3>
@@ -562,7 +576,7 @@
       <div class="container">
       <button onclick="chooseAnswer(7,1)">公開場合唱國歌、拿國旗</button>
       <button onclick="chooseAnswer(7,2)">到中國投資</button>
-      <button onclick="chooseAnswer(7,3)" style="font-size: 125%;letter-spacing: 0;">支持太陽花學運、香港佔中</button></div>
+      <button onclick="chooseAnswer(7,3)" style="">支持太陽花學運、香港佔中</button></div>
   </div>
   <div id="answer7_1" class="window">
     <h3 class="green">公開場合唱國歌、拿國旗</h3>
@@ -625,9 +639,9 @@
 <div id="portrait5" class="window">
   <h3>彭明敏</h3>
   <p>當我們把頭抬起來，看到：國家地位模糊、國格淪喪、國家目的破碎、社會迷失徬徨......，所以真正愛台灣、關心台灣的人，有一種感覺——台灣非重建不可，政治非改革不可，社會非改造不可......
-  </br>－政治大學「請問總統先生」國是座談，1995年12月15日。
-</br>回到台灣的彭明敏，1995年彭明敏順利通過民進黨黨內初選，並邀請謝長廷擔任副總統人選，共同參選台灣首屆民選總統。
-<img src="Images/5-2-1996.3總統民選選舉11.jpg" width="48%" style="margin:1em 4% 3em 0;"><img src="Images/5-3彭明敏謝長廷競選文宣標誌.jpg  " width="48%">
+  <br>－政治大學「請問總統先生」國是座談，1995年12月15日。
+<br>回到台灣的彭明敏，1995年彭明敏順利通過民進黨黨內初選，並邀請謝長廷擔任副總統人選，共同參選台灣首屆民選總統。
+<br><img src="Images/5-2-1996.3總統民選選舉11.jpg" width="48%" style="margin:1em 4% 3em 0;"><img src="Images/5-3彭明敏謝長廷競選文宣標誌.jpg  " width="48%">
 
 </br> 圖：1996.3參與民主進步黨總統候選人黨內初選選舉文宣、彭明敏・謝長廷競選視覺標誌</p>
 <div class="containerRow">
@@ -679,7 +693,7 @@
   <h3>黃信介</h3>
   <p>美麗島的精神
   </br> 1、大公無私    2、同志愛    3、團結和諧    4、反K到底    5、愛台灣為同胞    6、培養新生代
-< br>作法：
+<br>作法：
 <br>團結所有黨人士，宣揚台灣文化。對抗K。為台灣爭權利。
 <br><img src="Images/10-1-1978串聯與未完成的選舉 03.jpeg" width="32%" style="margin:1em 4% 3em 0;"><img src="Images/10-2黃信介手稿.jpg"width="64%">
 
@@ -736,10 +750,10 @@
 <div id="portrait15" class="window">
   <h3>李鎮源</h3>
   <p>1991年9月21日，中研院士李鎮源及陳師孟、林山田、廖宜恩等教授，號召成立「100行動聯盟」，要求廢止刑法第100條。1991年10月8日，發動「反閱兵，廢惡法」，在總統府旁的台大醫學院基礎醫學大樓前靜坐抗議。在「100行動聯盟」的施壓及社會持續呼籲下，終於使國民黨當局在「只修不廢」的原則下，同意廢除言論叛亂的最後一道枷鎖。
-    <img src="Images/15-2-邱萬興提供-1991.9.24廢除刑法一百條  (117).jpg" width="34%" style="margin:1em 4% 0 0;"><img src="Images/15-3-邱萬興提供-1991布條.jpeg"width="62%" style="margin:1em 0% 0 0;">
+    <br><img src="Images/15-2-邱萬興提供-1991.9.24廢除刑法一百條  (117).jpg" width="34%" style="margin:1em 4% 0 0;"><img src="Images/15-3-邱萬興提供-1991布條.jpeg"width="62%" style="margin:1em 0% 0 0;">
     <br><img src="Images/15-1-邱萬興提供-100行動聯盟logo-1991.jpeg">
 
-  </br>圖：1991年「100行動聯盟」傳單、布條、標語圖</p>
+  <br>圖：1991年「100行動聯盟」傳單、布條、標語圖</p>
   <div class="containerRow">      
     <button onclick="closeWindow('#portrait15')">關閉</button><button onclick="window.open('https://freedom-road.toooair.cyou/page15','_blank');">更多</button></div>
 </div>
@@ -753,10 +767,10 @@
   </div>
 </div>
 
-<div class="window" id="entername" style="height: 75%;justify-content: start;">
-    <h2 id="prompt" style="padding-top: 20%;"><br>請輸入您的名字</h2 >
+<div class="window" id="entername" style="justify-content: start;">
+    <h2 id="prompt" style="padding-top: 15vh;">請輸入您的名字</h2 >
     <input type="text" id="input_name" name="name">
-    <div class="containerSingle" style="margin-top: 10vh;"><button onclick="createCertificate();closeWindow('#entername');" style="width: 30%;">兌換證書</button></div>
+    <div class="containerSingle" style="margin-top: 10vh;margin-bottom: 10vh;"><button onclick="createCertificate();closeWindow('#entername');" style="width: 30%;">兌換證書</button></div>
     
 
 
