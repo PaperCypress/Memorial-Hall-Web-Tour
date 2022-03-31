@@ -44,6 +44,8 @@
           overflow: hidden;
             width: 94%;
             height: fit-content;
+            height: -webkit-fit-content;
+            height: -moz-fit-content;
             max-height: 75%;
             background: radial-gradient(circle at top, rgba(126,126,126,0.9) 0%, rgba(51,51,51,0.9) 40%);
 
@@ -87,7 +89,7 @@
           letter-spacing: 0.1em;
           color:rgb(200, 200, 200);
           overflow: auto;
-          flex:1;
+          
           margin: 0;
           padding: 3vmax 7vmin;
 
@@ -102,16 +104,15 @@
         .window button{
           letter-spacing: 0.05em;
           color: rgb(30, 189, 110);
-          border-radius: 30px;
-          outline: #979797 solid 2px;
+          border-radius: 3rem;
+
+          transform: translateZ(0);
+          border: 2px solid #979797  ;
           background-color: rgba(216, 216, 216, 0.3);
           display: flex;
           flex: 2 1 100%;
-          max-height: 50px;
           height:4vh;
           margin:1.6vh 5vw  0;
-          border: none;
-          
           font-weight: bold;
           font-size: 120%;
           align-items: center;
@@ -476,7 +477,7 @@
       <div class="containerRow"><button onclick="switchWindow('#quiz3','#answer3_3')">返回</button><button onclick="closeAnswer(3,3)">好</button></div>
   </div>
 
-  <div id="quiz4" class="window">
+  <div id="quiz4" class="window show">
     <h3 style="font-size: 5.7vmin;">1960年代言論窒息下無畏的身影</h3>
     <p>今日在臺灣有創作、翻譯、報導、出版的自由，但在1960年代卻可能因為下列哪些行為而遭到逮補？</p>
       <div class="container">
