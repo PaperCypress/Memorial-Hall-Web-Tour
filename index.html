@@ -717,7 +717,7 @@
   <h3>施明德</h3>
   <p>《施明德給臺灣的政治遺囑》一書，出版於1988年1月，是施明德在美麗島軍法大審最後答辯全文（近90頁），它呈現了一位人權工作者的心路歷程，為臺灣未來的民主前程提供幾個既現實又前衛的對策。
   </br>《奉獻給臺灣的施明德》是施明德重新取得公民權後，代表民進黨在1992年參選台南市立法委員的競選手冊。
-  <br><img src="Images/12-1-施明德的政治遺囑.jpg" width="46.8%" style="margin:1em 4% 3em 0;"><img src="Images/12-2-獻給臺灣的施明德.jpg"width="49.2%"></p>
+  <br><img src="Images/12-1-施明德的政治遺囑.jpg" width="46.8%" style="margin:1em 4% 3em 0;"><img src="Images/12-2.jpg"width="49.2%"></p>
 
   <div class="containerRow">
     <button onclick="closeWindow('#portrait12')">關閉</button>  <button onclick="window.open('https://freedom-road.toooair.cyou/page12','_blank');">更多</button>
@@ -752,10 +752,16 @@
   <p>1991年9月21日，中研院士李鎮源及陳師孟、林山田、廖宜恩等教授，號召成立「100行動聯盟」，要求廢止刑法第100條。1991年10月8日，發動「反閱兵，廢惡法」，在總統府旁的台大醫學院基礎醫學大樓前靜坐抗議。在「100行動聯盟」的施壓及社會持續呼籲下，終於使國民黨當局在「只修不廢」的原則下，同意廢除言論叛亂的最後一道枷鎖。
     <br><img src="Images/15-2-邱萬興提供-1991.9.24廢除刑法一百條  (117).jpg" width="34%" style="margin:1em 4% 0 0;"><img src="Images/15-3-邱萬興提供-1991布條.jpeg"width="62%" style="margin:1em 0% 0 0;">
     <br><img src="Images/15-1-邱萬興提供-100行動聯盟logo-1991.jpeg">
-
   <br>圖：1991年「100行動聯盟」傳單、布條、標語圖</p>
   <div class="containerRow">      
     <button onclick="closeWindow('#portrait15')">關閉</button><button onclick="window.open('https://freedom-road.toooair.cyou/page15','_blank');">更多</button></div>
+</div>
+<div id="portrait16" class="window">
+  <p>為呼應鄭南榕所推動的反戒嚴的兩次519綠色行動，告別式安排於1989年5月19日舉行。5月17日鄭南榕移靈，移靈車隊行經總統府，田媽媽（田孟淑女士）在總統府前高舉鄭南榕遺像抗議國民黨非法拘捕逼使鄭南榕自焚殉道。
+
+    <br>本次陳列，刻意將這幅攝影作品掛斜放，不僅呈現當時警民拉扯的臨場感，同時也透過將攝影作品斜放的角度「把影像中的鄭南榕遺像扶正」。</p>
+  <div class="containerRow">      
+    <button onclick="closeWindow('#portrait16')">關閉</button><button onclick="window.open('https://freedom-road.toooair.cyou/page16','_blank');">更多</button></div>
 </div>
 
 <div id="progress" class="window" style="height: 75%;">
@@ -820,6 +826,7 @@
       <a-entity id="char13" mindar-image-target="targetIndex: 19"></a-entity>
       <a-entity id="char14" mindar-image-target="targetIndex: 20"></a-entity>
       <a-entity id="char15" mindar-image-target="targetIndex: 21"></a-entity>
+      <a-entity id="char16" mindar-image-target="targetIndex: 22"></a-entity>
     </a-scene>
 
   </body>
@@ -848,7 +855,7 @@ sceneEl.addEventListener("arReady", (event) => {
       openWindow("#quiz"+CSS.escape(i));
     });
     }
-    for (let i = 1; i < 16; i++) {
+    for (let i = 1; i < 17; i++) {
     const areaTarget = document.querySelector("#char"+CSS.escape(i));
     areaTarget.addEventListener("targetFound", event => {  
       console.log("target found "+(i+7))
